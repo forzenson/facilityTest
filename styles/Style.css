@@ -1,0 +1,318 @@
+@font-face {
+    font-family: "Helvetica Neue"; 
+    src: url(../fonts/HelveticaNeue.ttf); 
+   }
+@font-face {
+    font-family: PTSans; 
+    src: url(../fonts/PTSans-Caption.ttf); 
+   }
+
+
+#dogPng {
+	padding: 0;
+	margin-right: 100px;
+}
+#container {
+	background-color:#ecda80;
+	margin: 0 auto;
+	width: 100%;
+	border-radius: 0;
+	text-align: center;
+}
+#signUpButton {
+	background-color:#d6393d;
+	color:white;
+	height: 35px;
+	width:158px;
+	margin-top: 7px;
+	font-family: "PTSans", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	padding: 0px;
+}
+#signUpButton:hover, #signUpButtonForm:hover {
+	background-color: #942a2c;
+}
+#signUpButton:active, #signUpButtonForm:active {
+	background-color: #f23c40;
+}
+body .navbar-nav>li>a {
+	color:black;
+	font-family: "PTSans", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	vertical-align: middle;
+}
+.navbar-nav {
+	width:100%;
+	text-align: center;
+	height: 50px;
+}
+#container .navbar-nav li {
+	float: none;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 30px;
+}
+.wallpaper {
+	background: url(../img/wallpaper.png);
+    background-position: center center;
+    background-size: cover;
+    width: 100vw;
+    max-width: 100%;
+    height: calc(100vh - 50px);
+    font-family: "PTSans", Helvetica, Arial, sans-serif;
+    text-align: center;
+	font-size: 72px;
+	vertical-align: middle;
+	padding-top: 250px;
+	color:black;
+}
+.secondTitle {
+	font-size: 21px;
+	margin-top: 60px;
+}
+.thirdPart {
+	text-align: center;
+	font-size: 16px;
+	font-family: "PTSans", Helvetica, Arial, sans-serif;
+	color:black;
+}
+#wow {
+	font-size: 42px;
+	margin-top: 70px;
+}
+.thirdPart li {
+	display: table-cell;
+	width: 220px;
+	height: 100%;
+	vertical-align: top;
+}
+.thirdPart li p{
+	margin:0;
+}
+.thirdPart ul {
+	padding: 0;
+	display: table;
+	margin: 70px auto 0 auto;
+	border-spacing: 50px 30px;
+}
+.thirdPart img {
+	margin-bottom: 20px;
+}
+#signForm {
+	height: 517px;
+	width: 600px;
+	display: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 100px;
+	background-color: white;
+	border-radius: 5px;
+	padding: 40px;
+	z-index: 9;
+}
+
+.icon {
+	transform: translate(-50%, -50%);
+	width: 38px;
+	height: 38px;
+	cursor: pointer;
+	background: white;
+	position: absolute;
+	top: 22px;
+	left: 578px;
+}
+.closeButton {
+	width: 38px;
+	height: 2px;
+	background:#EDDB7A;
+	transform: translate(-50%,-50%);
+	box-shadow: 0 2px 5px rgba (0,0,0,.2);
+	transition: .5s;
+	position: absolute;
+	top:50%;
+	left:50%;
+}
+.closeButton:before, .closeButton:after {
+	content: '';
+	position: absolute;
+	width: 38px;
+	height: 2px;
+	background: #EDDB7A;
+	box-shadow: 0 2px 5px rgba (0,0,0,.2);
+	transition: .5s;
+}
+.icon.active .closeButton {
+	background: rgba(0,0,0,0);
+	box-shadow: 0 2px 5px rgba(0,0,0,0);
+}
+.icon.active .closeButton:before {
+	top: 0;
+	transform: rotate(45deg);
+}
+.icon.active .closeButton:after {
+	top: 0;
+	transform: rotate(135deg);
+}
+#titleForm {
+	font-size: 22px;
+	font-family: "PTSans", Helvetica, Arial, sans-serif;
+}
+#signForm p {
+	margin-bottom: 0;
+}
+
+#signUpButtonForm {
+	background-color:#d6393d;
+	color:white;
+	height: 42px;
+	width:243px;
+	margin-top: 7px;
+	font-family: "PTSans", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	padding: 0px;
+	float: left;
+	margin-top:40px;
+}
+#signForm input {
+	border-color: #EDDB7A;
+	height:42px;
+}
+#signForm label {
+	font-size: 16px;
+	margin-top:30px;
+	margin-bottom:10px;
+}
+#signForm #checkBoxLink {
+	font-size: 14px;
+	margin-top:39px;
+}
+
+#mask {
+    background-color:rgba(0,0,0,.3);
+    height:100%;
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    display: none;
+    z-index: 5;
+}
+
+input[type=checkbox].css-checkbox {
+	position:absolute; 
+	z-index:-1000; 
+	left:-1000px; 
+	overflow: hidden; 
+	clip: rect(0 0 0 0); 
+	height:1px; 
+	width:1px; 
+	margin:-1px; 
+	padding:0; 
+	border:0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+	padding-left:21px;
+	height:16px; 
+	display:inline-block;
+	line-height:16px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:16px;
+	vertical-align:middle;
+	cursor:pointer;
+}
+input[type=checkbox].css-checkbox:checked + label.css-label {
+	background-position: 0 -16px;
+}
+label.css-label {
+	background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_81f722579f9a47fe19127e2f016b3c37.png);
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+#signForm #labelCheckbox {
+	font-size: 14px;
+	color:#95989a;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin-top: 52px;
+	float:right;
+}
+#signForm #labelCheckbox a{
+	color:#95989a;
+	text-decoration:underline;
+}
+#signForm #labelCheckbox a:hover{
+	text-decoration:none;
+}
+
+@media only screen and (max-width : 1000px) {
+body .navbar-nav>li>a {
+	padding:15px 0;
+}
+#dogPng {
+	display: none;
+}
+}
+@media only screen and (max-width : 825px) {
+.thirdPart li {
+	display: block;
+	margin-bottom: 40px;
+}
+.thirdPart ul {
+	margin: 30px auto 0 auto;
+}
+#container .navbar-nav {
+	margin: 0px;
+}
+}
+@media only screen and (max-width : 730px) {
+.mainTitle {
+	font-size:36px;
+}
+#container {
+	padding: 0;
+}
+#container .navbar-nav {
+	margin: 0;
+}
+}
+@media only screen and (max-width : 700px) {
+#container .navbar-nav li {
+	margin: 0 10px;
+}
+}
+@media only screen and (max-width : 620px) {
+#signForm  {
+	width: 323px;
+    height: 560px;
+}
+#signForm #labelCheckbox {
+	float:none;
+}
+#titleForm {
+	font-size: 18px;
+}
+#signForm #labelCheckbox {
+	margin-top: 40px;
+}
+.icon {
+	left: 300px;
+}
+}
+@media only screen and (max-width : 500px) {
+#container .navbar-nav li {
+	margin: 0;
+}
+}
+@media only screen and (max-width : 394px) {
+#container  {
+	height: 100px;
+}
+}
+
